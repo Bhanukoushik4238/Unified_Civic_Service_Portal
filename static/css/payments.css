@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
+    color: #0f172a;
+}
+
+.payments-page {
+    min-height: 100vh;
+}
+
+.payments-header {
+    background: linear-gradient(125deg, #0f172a 0%, #1d4ed8 100%);
+    color: #fff;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.payments-header-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payments-back-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.22);
+    color: #fff;
+    cursor: pointer;
+}
+
+.payments-chip {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.payments-lang-chip {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    padding: 6px 8px;
+}
+
+.payments-content {
+    padding: 20px;
+    display: grid;
+    gap: 14px;
+}
+
+.payments-card {
+    background: #fff;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    padding: 14px;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.05);
+}
+
+.payments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.payments-stat {
+    background: #f8fbff;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.payments-stat strong {
+    font-size: 24px;
+    color: #1d4ed8;
+}
+
+.payments-table-wrap {
+    overflow-x: auto;
+}
+
+.payments-table {
+    width: 100%;
+    min-width: 980px;
+    border-collapse: collapse;
+}
+
+.payments-table th,
+.payments-table td {
+    border-bottom: 1px solid #e2e8f0;
+    padding: 9px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.payments-table th {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #334155;
+}
+
+.service-badge,
+.status-badge {
+    display: inline-block;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 8px;
+    text-transform: uppercase;
+}
+
+.service-electricity {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.service-gas {
+    background: #ffedd5;
+    color: #c2410c;
+}
+
+.status-success {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-failed {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.status-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.payments-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 7px 10px;
+    cursor: pointer;
+    background: #e2e8f0;
+}
+
+.payments-empty {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.payments-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.payments-select {
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 7px 8px;
+    background: #fff;
+}
+
+@media (max-width: 768px) {
+    .payments-content {
+        padding: 12px;
+    }
+}

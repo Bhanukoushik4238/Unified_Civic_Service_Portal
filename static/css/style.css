@@ -1,0 +1,271 @@
+/* ===============================
+   GLOBAL
+================================= */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f3f4f6;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   NAVBAR
+================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.logo img {
+    display: block;
+}
+
+.logo span {
+    font-size: 18px;
+    position: relative;
+    top: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-item {
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.2s ease;
+}
+
+.nav-item:hover {
+    color: #3b82f6;
+}
+
+/* ===============================
+   PERFECT DROPDOWN FIX
+================================= */
+
+.dropdown-parent {
+    position: relative;
+}
+
+/* Invisible bridge to prevent gap issue */
+.dropdown-parent::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 15px;   /* bridge height */
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;      /* attach directly */
+    left: 0;
+    margin-top: 5px; /* small spacing */
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    min-width: 200px;
+    display: none;
+    z-index: 999;
+}
+
+/* 👇 Keeps dropdown open properly */
+.dropdown-parent:hover .dropdown,
+.dropdown:hover {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: #f1f5f9;
+}
+
+
+/* ===============================
+   HERO SECTION
+================================= */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    min-height: 90vh;
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.hero-text h1 {
+    font-size: 76px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text .blue { color: #3b82f6; }
+.hero-text .green { color: #84cc16; }
+
+.description {
+    margin-top: 25px;
+    font-size: 19px;
+    color: #64748b;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* ===============================
+   FLAG SECTION
+================================= */
+.flag-container {
+    display: flex;
+    justify-content: center;
+}
+
+.flag-box {
+    position: relative;
+    width: 520px;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.flag {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.emblem {
+    position: absolute;
+    width: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ===============================
+   FOOTER
+================================= */
+.footer {
+    background: white;
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 60px;
+}
+
+.top-footer {
+    display: inline-block;
+    background: #3b82f6;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.2s ease;
+}
+
+.top-footer:hover {
+    background: #2563eb;
+}
+
+/*  NEW FOOTER LOGO SECTION */
+.footer-logos {
+    margin: 25px 0;
+}
+
+.footer-logos img {
+    display: block;
+    margin: 10px auto;
+}
+
+.cdac-logo {
+    width: 140px;
+}
+
+.small-emblem {
+    width: 60px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media(max-width: 1000px) {
+
+    .navbar { padding: 15px 25px; }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .hero-text h1 { font-size: 44px; }
+
+    .description {
+        font-size: 16px;
+        margin: 20px auto;
+    }
+
+    .flag-box {
+        width: 100%;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .emblem { width: 80px; }
+}
+/* ===============================
+   GOVT LINE FOOTER
+================================= */
+
+.govt-line {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.small-emblem {
+    width: 45px;
+}
+
+.cdac-logo-small {
+    width: 100px;
+}
