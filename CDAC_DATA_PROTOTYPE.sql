@@ -569,6 +569,8 @@ CREATE TABLE connection_requests (
 
 
 -- Admin Table 
+-- Admin Table (Final Clean Version)
+
 CREATE TABLE admins (
     admin_id CHAR(36) PRIMARY KEY,
 
@@ -582,17 +584,11 @@ CREATE TABLE admins (
 
     role ENUM('electricity_admin','gas_admin') NOT NULL,
 
-    provider_code VARCHAR(30),
-
     is_active BOOLEAN DEFAULT TRUE,
 
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
-    FOREIGN KEY (provider_code)
-        REFERENCES providers(provider_code)
-        ON DELETE SET NULL
-        ON UPDATE CASCADE
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
 
 
 SHOW TABLES;
